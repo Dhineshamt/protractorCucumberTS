@@ -3,8 +3,8 @@ import * as reporter from "cucumber-html-reporter";
 
 
 export let config: Config = {
-    seleniumAddress: "http://localhost:4444/wd/hub",
-    directConnect: false,
+    // seleniumAddress: "http://localhost:4444/wd/hub",
+    directConnect: true,
     ignoreUncaughtExceptions: true,
     
     //Cucumber related config
