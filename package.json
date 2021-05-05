@@ -6,8 +6,9 @@
   "scripts": {
     "test": " protractor dist/cucumberconfig.js",
     "clean:dist": "rimraf dist",
+    "webdriver-update": "webdriver-manager update",
     "tsc": "tsc",
-    "pretest": "run-s clean:dist tsc"
+    "pretest": "run-s webdriver-update clean:dist tsc"
   },
   "author": "",
   "license": "ISC",
