@@ -3,8 +3,8 @@ import * as reporter from "cucumber-html-reporter";
 
 
 export let config: Config = {
-    // seleniumAddress: "http://localhost:4444/wd/hub",
-    directConnect: true,
+    seleniumAddress: "http://localhost:4444/wd/hub",
+    directConnect: false,
     ignoreUncaughtExceptions: true,
     
     //Cucumber related config
@@ -12,10 +12,11 @@ export let config: Config = {
     frameworkPath: require.resolve("protractor-cucumber-framework"),
 
     SELENIUM_PROMISE_MANAGER: false,
-    defaultTimeoutInterval: 50000,
+    defaultTimeoutInterval: 30000,
 
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
+
     },
 
     specs: ['../features/demo.feature'],
