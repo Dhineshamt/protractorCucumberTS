@@ -12,7 +12,7 @@ Given('I launch w3 schools website', async () => {
 })
 
 Then('I land on w3 schools website', async () => {
-    expect(await browser.getTitle()).to.equal('W3Schools Online Web Tutorials');
+    expect(await browser.getTitle()).to.equal('W3Schoolss');
 })
 
 Given('I click LearnHTML button', async () => {

@@ -3,7 +3,7 @@ import * as reporter from "cucumber-html-reporter";
 
 
 export let config: Config = {
-    seleniumAddress: "http://localhost:4444/wd/hub",
+    seleniumAddress: "http://13.126.242.234:49156/wd/hub",
     directConnect: false,
     ignoreUncaughtExceptions: true,
     
