@@ -3,9 +3,14 @@ import * as reporter from "cucumber-html-reporter";
 
 
 export let config: Config = {
-    seleniumAddress: "http://13.126.242.234:49156/wd/hub",
+    // seleniumAddress: "http://13.234.59.223:4444/wd/hub",
+    
+    seleniumAddress: "http://localhost:4444/wd/hub",
     directConnect: false,
     ignoreUncaughtExceptions: true,
+    params: {
+        url: "https://www.w3schools.com/"
+    },
     
     //Cucumber related config
     framework: "custom",
@@ -14,14 +19,29 @@ export let config: Config = {
     SELENIUM_PROMISE_MANAGER: false,
     defaultTimeoutInterval: 30000,
 
-    capabilities: {
-        browserName: 'chrome',
-        chromeOptions: {
-            args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
-          }
-    },
+     capabilities: {
+         browserName: 'chrome',
+        // chromeOptions: {
+        //     args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+        //   }
+    // allows different specs to run in parallel.
+    // If this is set to be true, specs will be sharded by file
+    // (i.e. all files to be run by this set of capabilities will run in parallel).
+    // Default is false.
+    // shardTestFiles: true,
+     
+    // Maximum number of browser instances that can run in parallel for this
+    // set of capabilities. This is only needed if shardTestFiles is true.
+    // Default is 1.
+    // maxInstances: 2, 
+     },
 
-    specs: ['../features/demo.feature'],
+    // multiCapabilities: [
+    //     {'browserName': 'chrome'},
+    //     {'browserName': 'firefox'},
+    // ],
+
+    specs: ['../features/*.feature', ],
 
     cucumberOpts: {
         format: 'json:./cucumberreport.json',

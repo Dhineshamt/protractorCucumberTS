@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/chai": "^4.2.18",
     "@types/cucumber": "^4.0.4",
     "@types/jasmine": "^2.8.8",
     "@types/jasminewd2": "2.0.6",

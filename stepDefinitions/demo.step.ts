@@ -8,7 +8,7 @@ const homePage = new HomePage();
 
 
 Given('I launch w3 schools website', async () => {
-    await browser.get('https://www.w3schools.com/');
+    await browser.get(browser.params.url);
 })
 
 Then('I land on w3 schools website', async () => {
