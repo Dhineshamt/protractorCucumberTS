@@ -17,7 +17,7 @@ export let config: Config = {
     frameworkPath: require.resolve("protractor-cucumber-framework"),
 
     SELENIUM_PROMISE_MANAGER: false,
-    defaultTimeoutInterval: 30000,
+    defaultTimeoutInterval: 300000,
 
      capabilities: {
          browserName: 'chrome',
@@ -41,7 +41,7 @@ export let config: Config = {
     //     {'browserName': 'firefox'},
     // ],
 
-    specs: ['../features/*.feature', ],
+    specs: ['../features/demo.feature', ],
 
     cucumberOpts: {
         format: 'json:./cucumberreport.json',
